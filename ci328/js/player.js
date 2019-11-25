@@ -20,7 +20,7 @@ class Player {
             barrelOffset: { x: 50, y: -5 },
             damage: 40
         }
-        this.weapon = this.pistolWeapon;
+        this.weapon = this.rifleWeapon;
 
         this.lastFired = this.weapon.fireRate;
 
@@ -109,7 +109,7 @@ class Player {
         if (this.playerContainer.body.onFloor()) {
 
             this.sprite.anims.play('jump', true); // walk right
-            this.playerContainer.body.setVelocityY(-2500);
+            this.playerContainer.body.setVelocityY(-500);
         }
     }
 

@@ -144,7 +144,7 @@ function create() {
 
     // coinLayer.setTileIndexCallback(17, collectCoin, game);
     // when the player overlaps with a tile with index 17, collectCoin 
-    this.backgroundBg = game.add.tileSprite(
+    /*this.backgroundBg = game.add.tileSprite(
         2500,
         1500,
         game.textures.get('background_bg').source[0].width,
@@ -186,7 +186,7 @@ function create() {
     this.backgroundFront.fixedToCamera = true;
 
     console.log('fsdsfsdfdfsdf', game.textures.get('background_mid'))
-
+*/
 
     world = new World(game);
     input = new Input();
@@ -212,7 +212,7 @@ function create() {
     this.cameras.main.startFollow(world.player.playerContainer, false, 1, 1, -200);
 
     // set background color, so the sky is not black    
-    // this.cameras.main.setBackgroundColor('#ccccff');
+    this.cameras.main.setBackgroundColor('#ccccff');
 
     /**/
     pauseGameForInput();

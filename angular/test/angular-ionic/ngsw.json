@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
   "timestamp": 1595249662219,
-  "index": "/angular/angular-ionic/index.html",
+  "index": "index.html",
   "assetGroups": [
     {
       "name": "app",

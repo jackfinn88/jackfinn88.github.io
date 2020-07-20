@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
-  "index": "/dump/angular/playground/ionic/angular-ionic/index.html",
+  "index": "/angular/test/angular-ionic/index.html",
   "assetGroups": [
     {
       "name": "app",

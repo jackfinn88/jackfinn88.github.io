@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1595249662219,
-  "index": "index.html",
+  "timestamp": 1595250268213,
+  "index": "/angular/test/angular-ionic/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -54,7 +54,7 @@
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "15cce1633fb4d588dd53afcbf52315021949be84",
     "/main.7f063ed02d25459db97e.js": "ead9e17e0a18a1e4e3c129a86d7abcee4e2188c2",
-    "/manifest.webmanifest": "b384581ca3046b87c6360db5420c662323d604ae",
+    "/manifest.webmanifest": "66ba39a503c60c7df1f6a30392685a6f848c5944",
     "/polyfills.a4021de53358bb0fec14.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
     "/runtime.e227d1a0e31cbccbf8ec.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/styles.09e2c710755c8867a460.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"

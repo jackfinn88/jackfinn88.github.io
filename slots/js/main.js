@@ -298,7 +298,6 @@ class Reel extends PIXI.Container {
             
             symbol.y = j * SYMBOL_SIZE;
             symbol.x = Math.round(((SYMBOL_SIZE - symbol.width) * 0.5) + REEL_WIDTH * 0.5);
-            console.log(symbol.scale.x, symbol.scale.y)
 
             // set up the mixes!
             symbol.stateData.setMix('static', 'win', 0.2);
@@ -345,7 +344,6 @@ class SlotControls extends PIXI.Container {
         headerText.x = Math.round(top.width * 0.5);
         headerText.y = this.margin * 0.5;
         headerText.anchor.set(0.5);
-        console.log(headerText.height)
 
         top.addChild(headerText);
 
@@ -537,7 +535,6 @@ class Button extends PIXI.Graphics {
 }
 
 function spinComplete() {
-    console.log("spinComplete");
     slotControls.setInteractive(true);
 
     requestResult()
@@ -566,22 +563,32 @@ function requestResult() {
 
 function checkResult(res) {
     const results = res.response.results;
+
     if (results.win) {
         // go through each reel
         slotMachine.reels.forEach(reel => {
             let spine = null;
+
             // find symbols in play area
-            reel.children.forEach(symbol => {
+            for (let i = 0; i < reel.children.length; i++) {
+                const symbol = reel.children[i];
+                
                 if (symbol.transform.worldTransform.ty > (app.view.height * 0.5) - (SYMBOL_SIZE * 0.5) && symbol.transform.worldTransform.ty < (app.view.height * 0.5) + (SYMBOL_SIZE * 0.5)) {
                     spine = symbol;
+                    break;
                 }
-            });
+            }
+
+            // check for match
             if (spine != null) {
-                results.symbolIDs.forEach(id => {
+                for (let j = 0; j < results.symbolIDs.length; j++) {
+                    const id = results.symbolIDs[j];
+
                     if (spine.id == id) {
                         spine.playAnimation();
+                        break;
                     }
-                });
+                }
             }
         });
         handleWin(results);

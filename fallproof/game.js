@@ -24,7 +24,7 @@ window.onload = function() {
      game.state.start("TheGame");
      
      // setup game rotations - give high allowance if not found
-     rotations = document.location.href.split('?')[1].split('=')[1];
+     rotations = document.location.href?.split('?')[1]?.split('=')[1];
      if (!rotations) rotations = 99999;
 }
 
